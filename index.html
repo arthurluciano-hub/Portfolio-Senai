@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmilyPromaga</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Meus Serviços</h1>
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#tecnologias">Serviços</a></li>
+                <li><a href="">Contatos</a></li>
+            
+            </ul>
+        </nav>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <main>
+        <section class="banner">
+            <h2>Olá, eu sou o Arthur</h2>
+            <p>Estou fazendo curso de programação!</p>
+            <button 
+            type="button" 
+            onclick={alterarTexto()} 
+            id="botaoMensagem">
+            Clique para falar comigo</button>
+            <p id="mensagem"></p>
+        </section>        
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <p>Sou estudante de programação, e trabalho com financeiro!</p>
+        </section>
+        <section id="tencologias">
+            <h2>Tecnologias que estou aprendendo</h2>
+            <div class="cards"> 
+                <article class="card">
+                    <h3>HTML</h3>
+                    <p>Utilizado para estruturar o conteúdo das páginas</p>
+                </article>
+
+                <article class="card">
+                    <h3>CSS</h3>
+                    <p>Utilizado para estilizar o visual das páginas</p>
+                </article>
+
+                <article class="card">
+                    <h3>JavaScript</h3>
+                    <p>utilizado para adicionar interatividade nas páginas</p>
+                </article>
+            </div>
+        </section>
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <Article class="projeto">
+                <h3>Meu primeiro portfolio</h3>
+                <p>Projeto desenvolvido na primeira aula do curso, utilizando HTML, CSS e Javascript</p>
+            </Article>
+        </section>
+        <section id="Contato">
+            <h2>Contato</h2>
+            <p>Linkedin: <a href="https://br.linkedin.com/in/arthurluciano" target="_blank">Meu linkedin</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados ao Arthur</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>                      
