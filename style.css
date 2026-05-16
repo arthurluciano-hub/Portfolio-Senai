@@ -13,9 +13,18 @@ body{
 }
 
 header{
-    background-color: #f3f4f6;
-    color:black;
-    padding:20px
+    background-color: #050b18;
+    color: white;
+    padding: 20px;
+    border-bottom: 2px solid white;
+}
+
+.foto-perfil{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 4px solid #111827;
 }
 
 nav{
@@ -39,12 +48,13 @@ nav ul{
 }
 
 nav a{
-    color: black;
+    color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a:hover{
-    text-decoration:underline;
+    color: #2563eb;
 }
 
 main{
@@ -75,18 +85,39 @@ section{
 }
 
 button{
-    background-color: #2563eb;
-    color: white;
+    background-color: #1f2937;
+    color: #f3f4f6;
     padding: 12px 18px;
-    border: none;
-    border-radius: 8px;
+    border: 2px solid #2563eb;
+    border-radius: 10px;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 button:hover{
-    background-color: #1d4ed8;
+    background-color: #2563eb;
+    transform: scale(1.05);
 }
 
+.icone-tecnologia{
+    width: 60px;
+    height: 60px;  
+    margin-bottom: 10px;
+}
+
+.icone-css{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.icone-java{
+      width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+  
 .cards,
 .projetos{
     display: grid;
@@ -100,6 +131,12 @@ button:hover{
     padding: 20px;
     border-left: 5px solid #2563eb;
     border-radius: 8px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .card h3,
@@ -138,4 +175,126 @@ footer{
     .banner h2{
         font-size: 26px;
     }
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode{
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.light-mode header{
+    background-color: white;
+    color: #050b18;
+    border-bottom: 2px solid #050b18;
+}
+
+/* Links no modo claro */
+.light-mode nav a{
+    color: #111827;
+}
+
+.light-mode nav a:hover{
+    color: #2563eb;
+}
+
+/* SEÇÕES */
+.light-mode section{
+    background-color: white;
+    color: #111827;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* CARDS */
+.light-mode .card,
+.light-mode .projeto{
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+/* FOOTER */
+.light-mode footer{
+    background-color: white;
+    color: #111827;
+    border-top: 2px solid #2563eb;
+}
+
+/* =========================
+   BOTÃO TEMA
+========================= */
+
+
+/* SITE DARK -> botão claro */
+#temaBtn{
+    background-color: white;
+    color: #050b18;
+    border: 2px solid #050b18;
+    padding: 12px 24px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover */
+#temaBtn:hover{
+    transform: scale(1.05);
+}
+
+/* SITE LIGHT -> botão escuro */
+.light-mode #temaBtn{
+    background-color: #050b18;
+    color: white;
+    border: 2px solid #050b18;
+}
+
+#temaBtn{
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    padding: 12px 22px;
+}
+
+#sobre p{
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* =========================
+   PÁGINA PROJETOS
+========================= */
+
+.projeto{
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.projeto h3{
+    margin-bottom: 20px;
+}
+
+.projeto p{
+    line-height: 1.8;
+}
+
+/* =========================
+   TEXTO DA PÁGINA PROJETOS
+========================= */
+
+#projetos h2{
+    margin-bottom: 20px;
+}
+
+#projetos p{
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+#projetos h3{
+    margin-bottom: 20px;
+    margin-top: 30px;
 }

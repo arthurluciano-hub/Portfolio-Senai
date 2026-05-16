@@ -3,66 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmilyPromaga</title>
+    <title>ArthurPortfolio</title>
 </head>
 <body>
-
     <header>
         <nav>
-            <h1>Meus Serviços</h1>
-            <ul>
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#tecnologias">Serviços</a></li>
-                <li><a href="">Contatos</a></li>
-            
+            <h1>Meu Portfolio</h1>
+             <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="aprendizados.html">Aprenzados com IA</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
             </ul>
+            <button id="temaBtn" onclick="trocarTema()">
+                ☼ Light
+            </button>
         </nav>
         <link rel="stylesheet" href="style.css">
     </header>
     <main>
         <section class="banner">
+            <img class="foto-perfil" src="IMG/Fotoperfil.jpg" alt="Foto de perfil">
             <h2>Olá, eu sou o Arthur</h2>
             <p>Estou fazendo curso de programação!</p>
             <button 
             type="button" 
-            onclick={alterarTexto()} 
+            onclick="alterarTexto()" 
             id="botaoMensagem">
             Clique para falar comigo</button>
             <p id="mensagem"></p>
         </section>        
         <section id="sobre">
-            <h2>Sobre mim</h2>
-            <p>Sou estudante de programação, e trabalho com financeiro!</p>
+             <h2>Sobre mim</h2>
+
+            <p>
+                Meu nome é Arthur, tenho 31 anos e atuo há mais de 10 anos na área
+                financeira, com experiência em rotinas administrativas, controle
+                financeiro, análise de dados e relacionamento com clientes.
+            </p>
+
+             <p>
+                Ao longo da minha trajetória profissional, comecei a enxergar a
+                tecnologia como uma forma de otimizar processos e trazer mais eficiência
+                para o dia a dia da área financeira.
+            </p>
+
+            <p>
+                Atualmente estou estudando programação com foco em desenvolvimento web e
+                automações, utilizando tecnologias como HTML, CSS e JavaScript.
+                Meu principal objetivo é unir minha experiência no financeiro com a
+                tecnologia para criar soluções mais inteligentes e automatizadas.
+            </p>
+
+            <p>
+                Sou uma pessoa organizada, analítica e estou constantemente buscando
+                aprendizado e evolução profissional.
+             </p>
+
+
+
         </section>
         <section id="tencologias">
             <h2>Tecnologias que estou aprendendo</h2>
+            <p id="TecnologiaSelecionada"></p>
             <div class="cards"> 
-                <article class="card">
+                <article onclick="mostrarTecnologia('HTML')" class="card">
+                    <img class="icone-tecnologia" src="IMG/Design sem nome.png" alt="icone do HTML">
                     <h3>HTML</h3>
                     <p>Utilizado para estruturar o conteúdo das páginas</p>
                 </article>
 
-                <article class="card">
+                <article onclick="mostrarTecnologia('CSS')" class="card">
+                    <img class="icone-css" src="IMG/css.png.png" alt="icone css">
                     <h3>CSS</h3>
                     <p>Utilizado para estilizar o visual das páginas</p>
                 </article>
 
-                <article class="card">
+                <article onclick="mostrarTecnologia('javascript')"  class="card">
+                    <img class="icone-java" src="IMG/JavaClaro.png" alt="icone javascript">
                     <h3>JavaScript</h3>
                     <p>utilizado para adicionar interatividade nas páginas</p>
                 </article>
             </div>
         </section>
-        <section id="projetos">
-            <h2>Projetos</h2>
-            <Article class="projeto">
-                <h3>Meu primeiro portfolio</h3>
-                <p>Projeto desenvolvido na primeira aula do curso, utilizando HTML, CSS e Javascript</p>
-            </Article>
-        </section>
+
         <section id="Contato">
             <h2>Contato</h2>
-            <p>Linkedin: <a href="https://br.linkedin.com/in/arthurluciano" target="_blank">Meu linkedin</a></p>
+            <p>Linkedin: <a href="https://www.linkedin.com/in/arthuroliveiraluciano" target="_blank">Meu linkedin</a></p>
         </section>
     </main>
     <footer>
