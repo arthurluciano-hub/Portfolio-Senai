@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArthurPortfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
             <h1>Meu Portfolio</h1>
              <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="aprendizados.html">Aprenzados com IA</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aprendizados.html">Aprendizados com IA</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
             </ul>
             <button id="temaBtn" onclick="trocarTema()">
                 ☼ Light
             </button>
         </nav>
-        <link rel="stylesheet" href="style.css">
     </header>
-    <main>
-        <section class="banner">
+    <main class="pagina-inicio">
+        <section class="banner secao-destaque">
+            <span class="etiqueta-pagina">Portfólio pessoal</span>
             <img class="foto-perfil" src="IMG/Fotoperfil.jpg" alt="Foto de perfil">
             <h2>Olá, eu sou o Arthur</h2>
             <p>Estou fazendo curso de programação!</p>
@@ -32,8 +33,11 @@
             Clique para falar comigo</button>
             <p id="mensagem"></p>
         </section>        
-        <section id="sobre">
-             <h2>Sobre mim</h2>
+        <section id="sobre" class="secao-padrao">
+            <div class="cabecalho-secao">
+                <span class="etiqueta-pagina">Minha trajetória</span>
+                <h2>Sobre mim</h2>
+            </div>
 
             <p>
                 Meu nome é Arthur, tenho 31 anos e atuo há mais de 10 anos na área
@@ -62,8 +66,11 @@
 
 
         </section>
-        <section id="tencologias">
-            <h2>Tecnologias que estou aprendendo</h2>
+        <section id="tecnologias" class="secao-padrao">
+            <div class="cabecalho-secao">
+                <span class="etiqueta-pagina">Stack em evolução</span>
+                <h2>Tecnologias que estou aprendendo</h2>
+            </div>
             <p id="TecnologiaSelecionada"></p>
             <div class="cards"> 
                 <article onclick="mostrarTecnologia('HTML')" class="card">
@@ -86,8 +93,11 @@
             </div>
         </section>
 
-        <section id="Contato">
-            <h2>Contato</h2>
+        <section id="contato" class="secao-padrao contato-card">
+            <div class="cabecalho-secao">
+                <span class="etiqueta-pagina">Vamos conversar</span>
+                <h2>Contato</h2>
+            </div>
             <p>Linkedin: <a href="https://www.linkedin.com/in/arthuroliveiraluciano" target="_blank">Meu linkedin</a></p>
         </section>
     </main>

@@ -1,44 +1,98 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendizados com IA</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
             <h1>Meu Portfolio</h1>
 
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="aprendizados.html">Aprenzados com IA</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aprendizados.html">Aprendizados com IA</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
             </ul>
-             <button id="temaBtn" onclick="trocarTema()">
+
+            <button id="temaBtn" onclick="trocarTema()">
                 ☼ Light
             </button>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Aprendizados com IA</h2>
-            <P>Nesta pagina, registros duvidas de programação que estudei com apoio de inteligencia artificial generativa</P>
-            
-            <p id="contadoraprendizados"></p>
-            
-            <div class="filtros">
-                <button onclick="filtrarAprendizados('Todos')">Todos</button>
-                <button onclick="filtrarAprendizados('HTML')">HTML</button>
-                <button onclick="filtrarAprendizados('CSS')">CSS</button>
-                <button onclick="filtrarAprendizados('JavaScript')">JavaScript</button>
+        <section class="pagina-aprendizados">
+            <div class="cabecalho-aprendizados">
+                <span class="etiqueta-pagina">IA + estudos</span>
+                <h2>Aprendizados com IA</h2>
+                <p>Nesta página, registro dúvidas de programação que estudei com apoio de inteligência artificial generativa.</p>
             </div>
+
+            <form class="form-aprendizado" onsubmit="return adicionarAprendizado(event)">
+                <div class="cabecalho-form">
+                    <span class="etiqueta-pagina">Novo registro</span>
+                    <h3>Adicionar novo aprendizado</h3>
+                    <p>Preencha os campos com a dúvida, a resposta resumida e o que você entendeu com suas palavras.</p>
+                    <button type="button" id="botaoNovoRegistro" onclick="alternarFormularioAprendizado()">
+                        Novo registro
+                    </button>
+                </div>
+
+                <div id="camposAprendizado" class="campos-aprendizado oculto-form">
+                    <div class="campo-form">
+                        <label for="tema">Tema</label>
+                        <select id="tema" required>
+                            <option value="">Selecione</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="JavaScript">JavaScript</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="pergunta">Pergunta</label>
+                        <input type="text" id="pergunta" placeholder="Digite sua dúvida" required>
+                    </div>
+
+                    <div class="campo-form campo-form-completo">
+                        <label for="resposta">Resposta resumida</label>
+                        <textarea id="resposta" placeholder="Resumo da resposta da IA" required></textarea>
+                    </div>
+
+                    <div class="campo-form campo-form-completo">
+                        <label for="entendimento">O que eu entendi</label>
+                        <textarea id="entendimento" placeholder="Explique com as suas palavras" required></textarea>
+                    </div>
+
+                    <p id="feedbackFormulario" class="feedback-form" aria-live="polite"></p>
+
+                    <div class="acoes-form">
+                        <button type="submit">Adicionar aprendizado</button>
+                        <button type="button" class="botao-secundario" onclick="limparFormularioAprendizado()">Limpar campos</button>
+                    </div>
+                </div>
+            </form>
+
+            <p id="contadorAprendizados"></p>
             
-            <button onclick="mostrarOcultarAprendizados()" id="botaoaprendizados">
-                Ocultar aprendizados
-            </button>
+            <div class="barra-aprendizados">
+                <div class="filtros">
+                    <button onclick="filtrarAprendizados('Todos')">Todos</button>
+                    <button onclick="filtrarAprendizados('HTML')">HTML</button>
+                    <button onclick="filtrarAprendizados('CSS')">CSS</button>
+                    <button onclick="filtrarAprendizados('JavaScript')">JavaScript</button>
+                </div>
+                
+                <button onclick="mostrarOcultarAprendizados()" id="botaoAprendizados">
+                    Ocultar aprendizados
+                </button>
+            </div>
+
             <div id="listaAprendizados" class="cards-aprendizados"></div>
         </section>
     </main>
@@ -48,6 +102,6 @@
     </footer>
 
     <script src="script.js"></script>
-
 </body>
+
 </html>
